@@ -49,7 +49,7 @@ class ToDoForm extends Component {
   constructor() {
     super();
     this.state = {
-      newToDo: ""
+      newToDo: ''
     };
   }
 
@@ -61,7 +61,7 @@ class ToDoForm extends Component {
     element.preventDefault();
     this.props.addToDo(this.state.newToDo);
     this.setState({
-      newToDo: ""
+      newToDo: ''
     });
   };
 
@@ -75,7 +75,7 @@ class ToDoForm extends Component {
               value={this.state.newToDo}
               onChange={this.handleChanges}
               type="text"
-              name="todo"
+              name="item"
             />
             <button>Add</button>
           </div>

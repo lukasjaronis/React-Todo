@@ -77,12 +77,12 @@ toggleItem = id => {
 }
 
 
-
 addToDo = newToDoText => {
 
   const newToDo = {
     name: newToDoText,
-    id: Date.now()
+    id: Date.now(),
+    completed: false
   };
   this.setState({
     dailyList: [...this.state.dailyList, newToDo]
