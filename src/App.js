@@ -27,10 +27,6 @@ width: 100%;
 }
 }
 
-
-
-
-
 `;
 
 const dailyList = [
