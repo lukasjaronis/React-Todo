@@ -26,19 +26,6 @@ vertical-align: top;
 height: 100%;
 }
 
-button {
-         margin: 1rem;
-         padding: 0.4rem;
-         width: 10rem;
-         border-radius: 15px;
-         background: #379683;
-         color: #EDF5E1;
-         border: none;
-
-         &:hover {
-             font-weight: 900;
-         }
-     }
 
 `;
 
@@ -47,12 +34,9 @@ const ToDoList = props => {
         <ListStyles>
         <div className="listContainer">
      {props.dailyList.map(item => (
-         <Item key={item.id} item={item} />
+         <Item key={item.id} item={item} toggleItem={props.toggleItem} />
      ))}
         </div>
-        <button onClick={props.clearCOmpleted}>
-        Clear Completed
-        </button>
         </ListStyles>
     )
 }

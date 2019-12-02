@@ -22,7 +22,7 @@ align-items: center;
 const Item = props => {
     return (
       <ItemStyles>
-      <div className={`${props.item.completed ? ' completed' : ''} `}>
+      <div className={`${props.item.completed ? ' completed' : ''} `}  onClick={() => props.toggleItem(props.item.id)}>
         <p>{props.item.name}</p>
       </div>
       </ItemStyles>

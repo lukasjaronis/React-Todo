@@ -27,6 +27,9 @@ width: 100%;
 }
 }
 
+
+
+
 `;
 
 const dailyList = [
@@ -58,6 +61,23 @@ dailyList: dailyList
 }
 }
 
+toggleItem = id => {
+  this.setState({
+    dailyList: this.state.dailyList.map(item => {
+      if (item.id === id) {
+        return {
+          ...item,
+          completed: !item.completed
+        };
+      } else {
+        return item;
+      }
+    })
+  })
+}
+
+
+
 addToDo = newToDoText => {
 
   const newToDo = {
@@ -77,7 +97,7 @@ addToDo = newToDoText => {
         <h2>A Todo App</h2>
         <ToDoForm addToDo={this.addToDo} />
         <div>
-        <ToDoList dailyList={this.state.dailyList} />
+        <ToDoList toggleItem={this.toggleItem} dailyList={this.state.dailyList} />
         </div>
       </div>
       </AppStyles>
