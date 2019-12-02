@@ -6,6 +6,11 @@ import styled from 'styled-components';
 
 const ListStyles = styled.div `
 
+position: absolute;
+  left: 41%;
+
+
+.listContainer {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -17,13 +22,16 @@ width: 20rem;
 background: #EDF5E1; 
 font-weight: 700;
 border-radius: 5px;
+vertical-align: top;
+height: 100%;
+}
 
 `;
 
 const ToDoList = props => {
     return (
         <ListStyles>
-        <div>
+        <div className="listContainer">
      {props.dailyList.map(item => (
          <Item key={item.id} item={item} />
      ))}
