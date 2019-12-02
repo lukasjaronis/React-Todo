@@ -1,11 +1,11 @@
 import React from 'react';
 
-const todo = props => {
+const Item = props => {
     return (
-        <div className={`todo${props.item.added ? ' added' : ''}`}>
-        <span>{props.todo.name}</span>
-        </div>
-    )
-}
+      <div className={`item${props.item.completed ? ' Completed' : ''}`}>
+        <p>{props.item.name}</p>
+      </div>
+    );
+  };
 
-export default todo;
+export default Item;
