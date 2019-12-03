@@ -16,8 +16,8 @@ align-items: center;
   color: #EDF5E1;
   text-decoration: line-through;
 }
-
 `;
+
 
 const Item = props => {
     return (

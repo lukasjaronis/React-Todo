@@ -28,7 +28,24 @@ width: 100%;
 }
 
 
+button {
+        margin: 1rem;
+        padding: 0.4rem;
+        width: 15rem;
+        border-radius: 15px;
+        background: #379683;
+        color: #edf5e1;
+        border: none;
 
+        &:hover {
+          font-weight: 900;
+        }
+
+        &:focus {
+          outline: none;
+         
+        }
+      }
 
 `;
 
@@ -64,6 +81,7 @@ dailyList: dailyList
 toggleItem = id => {
   this.setState({
     dailyList: this.state.dailyList.map(item => {
+   
       if (item.id === id) {
         return {
           ...item,
@@ -73,6 +91,13 @@ toggleItem = id => {
         return item;
       }
     })
+  })
+}
+
+clearCompleted = e => {
+  e.preventDefault();
+  this.setState({
+    dailyList: this.state.dailyList.filter( item => item.completed === false)
   })
 }
 
@@ -95,9 +120,12 @@ addToDo = newToDoText => {
       <AppStyles>
       <div className="appContainer">
         <h2>A Todo App</h2>
-        <ToDoForm addToDo={this.addToDo} />
+        <ToDoForm clearCompleted={this.clearCompleted} addToDo={this.addToDo} />
         <div>
         <ToDoList toggleItem={this.toggleItem} dailyList={this.state.dailyList} />
+        </div>
+        <div>
+        <button onClick={this.clearCompleted}>Clear Completed Tasks</button>
         </div>
       </div>
       </AppStyles>

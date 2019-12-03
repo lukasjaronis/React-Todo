@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 const FormStyles = styled.div`
   form {
+   
     .formContainer {
+      
       input {
         border: none;
         background: none;

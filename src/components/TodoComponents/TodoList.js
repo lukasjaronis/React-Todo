@@ -8,7 +8,7 @@ const ListStyles = styled.div `
 
 position: absolute;
   left: 41%;
-
+  top: 35%;
 
 .listContainer {
 display: flex;
@@ -26,10 +26,10 @@ vertical-align: top;
 height: 100%;
 }
 
-
 `;
 
 const ToDoList = props => {
+
     return (
         <ListStyles>
         <div className="listContainer">
