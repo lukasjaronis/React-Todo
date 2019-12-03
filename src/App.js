@@ -122,10 +122,10 @@ addToDo = newToDoText => {
         <h2>A Todo App</h2>
         <ToDoForm clearCompleted={this.clearCompleted} addToDo={this.addToDo} />
         <div>
-        <ToDoList toggleItem={this.toggleItem} dailyList={this.state.dailyList} />
+        <button onClick={this.clearCompleted}>Clear Completed Tasks</button>
         </div>
         <div>
-        <button onClick={this.clearCompleted}>Clear Completed Tasks</button>
+        <ToDoList toggleItem={this.toggleItem} dailyList={this.state.dailyList} />
         </div>
       </div>
       </AppStyles>

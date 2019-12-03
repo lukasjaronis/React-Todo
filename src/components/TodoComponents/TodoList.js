@@ -6,10 +6,6 @@ import styled from 'styled-components';
 
 const ListStyles = styled.div `
 
-position: absolute;
-  left: 41%;
-  top: 35%;
-
 .listContainer {
 display: flex;
 flex-direction: column;
